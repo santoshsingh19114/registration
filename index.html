@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        <div class="container">
+
+            <div class="left-box">
+                <div class="shape">
+
+                    <h3>Left Box </h3>
+
+                </div>
+                <div class="login_option">
+                    <!-- <p>This is the left box content.</p> -->
+                    <p>Already have an account? <a href="">Log_in</a> </p>
+
+                    <div class="icons">
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
+                                style="font-size: 32px;"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"
+                                style="font-size: 32px;"></i></a>
+                        <a href="https://twitter.com/login" target="_blank"><i class="fa fa-google"
+                                style="font-size: 32px;"></i></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <div class="btn">
+                    <button class="google-signup" (click)="signUp($event)">
+
+                        <a href="/auth/google" class="btn grey darken-1">
+
+                            <i class="fa fa-google left"></i> <span> Sign up With Google </span>
+
+                        </a>
+
+                    </button>
+
+                </div>
+
+                <h2>or</h2>
+
+
+                <div class="line"></div>
+
+                <br><br>
+
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="name">
+                        <div class="first-name">
+                            <p> First Name:</p>
+                            <input class="first-name" type="text" id="first-name" [(ngModel)]="first_name"
+                                name="first-namee" placeholder="first-name" required>
+
+                        </div>
+                        <div class="last-name">
+
+                            <p> Last Name:</p>
+                            <input class="last-name" type="text" id="last-name" [(ngModel)]="last_name" name="last-name"
+                                placeholder="last-name" required>
+                        </div>
+
+                    </div>
+
+                    <!-- <br><br><br><br> <br><br> -->
+                    <div class="email-field">
+                        <p>Email:</p>
+                        <input class="email" type="email" id="email" [(ngModel)]="email_address" name="email"
+                            placeholder="email" required>
+                    </div>
+
+
+                    <div class="password-field">
+                        <p>Password:</p>
+                        <input class="password" type="password" id="password" [(ngModel)]="password" name="password"
+                            placeholder="password" required>
+                    </div>
+
+                    <input type="checkbox" name="checkbox" id="checkbox" required>
+                    I agree to the <a href="#"> Terms Of Service</a> and <a href="#">Privacy Notice.</a>
+
+                    <br><br><br>
+
+                    <button class="signin" type="submit">Sign me up !</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
